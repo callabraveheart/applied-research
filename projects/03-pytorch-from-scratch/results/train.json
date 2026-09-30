@@ -1,0 +1,100 @@
+{
+  "device": "cpu",
+  "corpus": "tinyshakespeare",
+  "vocab_size": 65,
+  "params": 3164672,
+  "uniform_loss_floor": 4.174387269895637,
+  "config": {
+    "steps": 1200,
+    "batch_size": 16,
+    "block_size": 128,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 256,
+    "lr": 0.0003,
+    "eval_interval": 100,
+    "attn": "sdpa"
+  },
+  "elapsed_sec": 498.0,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 4.1828,
+      "val_loss": 4.1756,
+      "lr": 3e-06
+    },
+    {
+      "step": 100,
+      "train_loss": 2.5533,
+      "val_loss": 2.5867,
+      "lr": 0.0003
+    },
+    {
+      "step": 200,
+      "train_loss": 2.4521,
+      "val_loss": 2.4805,
+      "lr": 0.000295
+    },
+    {
+      "step": 300,
+      "train_loss": 2.3987,
+      "val_loss": 2.4306,
+      "lr": 0.000279
+    },
+    {
+      "step": 400,
+      "train_loss": 2.3225,
+      "val_loss": 2.3535,
+      "lr": 0.000253
+    },
+    {
+      "step": 500,
+      "train_loss": 2.2524,
+      "val_loss": 2.2772,
+      "lr": 0.000221
+    },
+    {
+      "step": 600,
+      "train_loss": 2.2024,
+      "val_loss": 2.244,
+      "lr": 0.000184
+    },
+    {
+      "step": 700,
+      "train_loss": 2.151,
+      "val_loss": 2.1961,
+      "lr": 0.000146
+    },
+    {
+      "step": 800,
+      "train_loss": 2.1012,
+      "val_loss": 2.1606,
+      "lr": 0.000109
+    },
+    {
+      "step": 900,
+      "train_loss": 2.0701,
+      "val_loss": 2.1315,
+      "lr": 7.66e-05
+    },
+    {
+      "step": 1000,
+      "train_loss": 2.0423,
+      "val_loss": 2.1095,
+      "lr": 5.14e-05
+    },
+    {
+      "step": 1100,
+      "train_loss": 2.0251,
+      "val_loss": 2.0925,
+      "lr": 3.55e-05
+    },
+    {
+      "step": 1200,
+      "train_loss": 2.015,
+      "val_loss": 2.0903,
+      "lr": 3e-05
+    }
+  ],
+  "sample": "s lant cors?\n\nDUPIONT:\nAnd a shis woist, shis tho buthou sthin of tit youere,\nThit so Menuredikes of youn thy she die him youn t"
+}
