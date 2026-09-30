@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: leakage audit tests
+        working-directory: projects/01-leakage-audit
+        run: python -m pytest tests/ -v
+      - name: agent eval tests
+        working-directory: projects/02-agent-eval-harness
+        run: python -m pytest tests/ -v
+      - name: transformer tests
+        working-directory: projects/03-pytorch-from-scratch
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pytest tests/ -v
+      - name: end-to-end smoke run
+        run: |
+          cd projects/01-leakage-audit && python -m src.experiment --n 4000 --out /tmp/r.csv
+          cd ../02-agent-eval-harness && python -m src.make_tasks --n 40 --out /tmp/t.jsonl
+          python -m src.harness --tasks /tmp/t.jsonl --split all --out /tmp/run.json
