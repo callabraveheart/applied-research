@@ -1,0 +1,43 @@
+{
+  "device": "cpu",
+  "torch": "2.14.0",
+  "new_tokens": 64,
+  "model": {
+    "n_layer": 4,
+    "n_embd": 256
+  },
+  "rows": [
+    {
+      "prefix_len": 16,
+      "no_cache_sec": 0.3,
+      "cached_sec": 0.1,
+      "speedup": 2.9999999999999996,
+      "no_cache_ms_per_token": 4.6875,
+      "cached_ms_per_token": 1.5625
+    },
+    {
+      "prefix_len": 64,
+      "no_cache_sec": 0.38,
+      "cached_sec": 0.11,
+      "speedup": 3.4545454545454546,
+      "no_cache_ms_per_token": 5.9375,
+      "cached_ms_per_token": 1.71875
+    },
+    {
+      "prefix_len": 128,
+      "no_cache_sec": 0.63,
+      "cached_sec": 0.11,
+      "speedup": 5.7272727272727275,
+      "no_cache_ms_per_token": 9.84375,
+      "cached_ms_per_token": 1.71875
+    },
+    {
+      "prefix_len": 256,
+      "no_cache_sec": 1.05,
+      "cached_sec": 0.14,
+      "speedup": 7.5,
+      "no_cache_ms_per_token": 16.40625,
+      "cached_ms_per_token": 2.1875
+    }
+  ]
+}
