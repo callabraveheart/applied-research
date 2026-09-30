@@ -1,0 +1,80 @@
+{
+  "task_file": "data/tasks.jsonl",
+  "task_file_sha256_16": "776f5d9faae8e0ae",
+  "split": "heldout",
+  "n_items": 120,
+  "reports": [
+    {
+      "provider": "mock-small",
+      "n_items": 120,
+      "exact_match": 0.11666666666666667,
+      "exact_match_ci": [
+        0.058333333333333334,
+        0.175
+      ],
+      "field_accuracy": 0.6069444444444444,
+      "field_accuracy_ci": [
+        0.5527430555555555,
+        0.6569444444444446
+      ],
+      "latency_p50_ms": 177.94037300003043,
+      "latency_p95_ms": 259.34593722939866,
+      "cost_per_1k_items_usd": 0.0,
+      "failure_breakdown": {
+        "missing_field": 0.44166666666666665,
+        "format_mismatch": 0.275,
+        "unparseable_output": 0.14166666666666666,
+        "none": 0.11666666666666667,
+        "hallucinated_value": 0.025
+      }
+    },
+    {
+      "provider": "mock-baseline",
+      "n_items": 120,
+      "exact_match": 0.225,
+      "exact_match_ci": [
+        0.15,
+        0.3
+      ],
+      "field_accuracy": 0.7305555555555556,
+      "field_accuracy_ci": [
+        0.6847222222222223,
+        0.772256944444444
+      ],
+      "latency_p50_ms": 334.2560127198773,
+      "latency_p95_ms": 502.1331569531434,
+      "cost_per_1k_items_usd": 0.0,
+      "failure_breakdown": {
+        "missing_field": 0.4666666666666667,
+        "format_mismatch": 0.24166666666666667,
+        "none": 0.225,
+        "unparseable_output": 0.058333333333333334,
+        "hallucinated_value": 0.008333333333333333
+      }
+    },
+    {
+      "provider": "mock-large",
+      "n_items": 120,
+      "exact_match": 0.3,
+      "exact_match_ci": [
+        0.21666666666666667,
+        0.38333333333333336
+      ],
+      "field_accuracy": 0.8138888888888889,
+      "field_accuracy_ci": [
+        0.7805555555555554,
+        0.8458333333333333
+      ],
+      "latency_p50_ms": 1290.3251357019808,
+      "latency_p95_ms": 1924.7146102134811,
+      "cost_per_1k_items_usd": 0.0,
+      "failure_breakdown": {
+        "missing_field": 0.49166666666666664,
+        "none": 0.3,
+        "format_mismatch": 0.18333333333333332,
+        "unparseable_output": 0.016666666666666666,
+        "hallucinated_value": 0.008333333333333333
+      }
+    }
+  ]
+}
